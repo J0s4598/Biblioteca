@@ -1,24 +1,32 @@
 package model;
 
-import java.time.LocalDate;
+/*import java.time.LocalDate;*/
+import java.util.ArrayList;
 
 public class Emprestimo {
 	//Atributo
 	private Livro livro;
 	private Usuario usuario;
 	private Bibliotecario bibliotecario;
-	private LocalDate dataRetirada;
-	private LocalDate dataDevolucao;
+	/*private LocalDate dataRetirada;
+	private LocalDate dataDevolucao;*/
 	
 	//Metodo Construtor
-	public Emprestimo(Livro livro, Usuario usuario, Bibliotecario bibliotecario, LocalDate dataRetirada,
-			LocalDate dataDevolucao) {
+	public Emprestimo(Livro livro, Usuario usuario, Bibliotecario bibliotecario/*, LocalDate dataRetirada,
+			LocalDate dataDevolucao*/) {
 		super();
 		this.livro = livro;
 		this.usuario = usuario;
 		this.bibliotecario = bibliotecario;
-		this.dataRetirada = dataRetirada;
-		this.dataDevolucao = dataDevolucao;
+		/*this.dataRetirada = dataRetirada;
+		this.dataDevolucao = dataDevolucao;*/
+	}
+	
+	//metodo ToString
+	public String toSting(){
+		return "Titulo: " + this.livro.getTitulo() + "\n" + 
+			  "Autor: " + this.livro.getAutor() + "\n" +
+			  "Usuario: " + this.usuario.getNome() + "\n";
 	}
 	
 	//Get e Set
@@ -40,7 +48,7 @@ public class Emprestimo {
 	public void setBibliotecario(Bibliotecario bibliotecario) {
 		this.bibliotecario = bibliotecario;
 	}
-	public LocalDate getDataRetirada() {
+	/*public LocalDate getDataRetirada() {
 		return dataRetirada;
 	}
 	public void setDataRetirada(LocalDate dataRetirada) {
@@ -53,6 +61,7 @@ public class Emprestimo {
 		this.dataDevolucao = dataDevolucao;
 	}
 
+	*/
 	
 
 }
