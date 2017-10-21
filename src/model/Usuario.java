@@ -33,5 +33,18 @@ public class Usuario {
 		this.curso = curso;
 	}
 	
+	
+	//Metodo toString
+	public String toString(){
+		return "Nome do Usúario: " + this.nome + "\n" + 
+				"Matricula: " + this.matricula + "\n" + 
+				"Curso: " + this.curso + "\n";
+	}
+	
+	
+	
+	
+	
+	
 
 }

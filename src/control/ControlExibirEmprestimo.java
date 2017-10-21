@@ -17,7 +17,7 @@ public class ControlExibirEmprestimo {
 		ArrayList<Emprestimo> emprestimos = bds.getEmprestimo();
 		
 		//exibir todos os empestimos
-		ViewExibirEmprestimo vee = new ViewExibirEmprestimo(emprestimos);
+		/*ViewExibirEmprestimo vee = new ViewExibirEmprestimo(emprestimos);*/
 		
 		
 		//Exibir todos os emprestimos usando outra classe

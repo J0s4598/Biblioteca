@@ -14,8 +14,8 @@ public class ViewExibirEmprestimo {
 			System.out.println("Titulo: " + emprestimos.get(i).getLivro().getTitulo());
 			System.out.println("Autor: " + emprestimos.get(i).getLivro().getAutor());
 			System.out.println("Usuario: " + emprestimos.get(i).getUsuario().getNome());
-			/*System.out.println("Data de Retirda: " + emprestimos.get(i).getDataDeretirada());
-			System.out.println("Data de Retirda: " + emprestimos.get(i).getDataDevolucao());*/
+			System.out.println("Data de Retirda: " + emprestimos.get(i).getDataDevolucao());
+			System.out.println("Data de Retirda: " + emprestimos.get(i).getDataDevolucao());
 		}
 	}
 

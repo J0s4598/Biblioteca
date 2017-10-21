@@ -1,6 +1,6 @@
 package model;
 
-/*import java.time.LocalDate;*/
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class BDSimulado {
@@ -35,9 +35,9 @@ public class BDSimulado {
 		this.bibliotecarios.add(b2);
 		
 		//Criando Emprestimos
-		Emprestimo e1 = new Emprestimo(l1, u1, b1/*, LocalDate.of(2017, 10, 10), LocalDate.of(2017, 10, 15)*/);
-		Emprestimo e2 = new Emprestimo(l2, u2, b1/*, LocalDate.of(2017, 10, 11), LocalDate.of(2017, 10, 16)*/);
-		Emprestimo e3 = new Emprestimo(l1, u1, b1/*, LocalDate.of(2017, 10, 18), LocalDate.of(2017, 10, 23)*/);
+		Emprestimo e1 = new Emprestimo(l1, u1, b1, LocalDate.of(2017, 10, 10), LocalDate.of(2017, 10, 15));
+		Emprestimo e2 = new Emprestimo(l2, u2, b1, LocalDate.of(2017, 10, 11), LocalDate.of(2017, 10, 16));
+		Emprestimo e3 = new Emprestimo(l1, u1, b1, LocalDate.of(2017, 10, 18), LocalDate.of(2017, 10, 23));
 		//ADD Et
 		this.emprestimos.add(e1);
 		this.emprestimos.add(e2);
@@ -49,10 +49,22 @@ public class BDSimulado {
 	public ArrayList<Emprestimo> getEmprestimo(){
 		
 		return this.emprestimos;
-	
-		
-		
 	}
+	
+	//Retorna usuario de acordo com a matricula
+	public Usuario getUsuarioPorMatricula(String matricula){
+		Usuario retorno = null;
+		
+		//Percorrer a lista de usuario
+		for (int i = 0; i < this.usuarios.size(); i++) {
+			if (this.usuarios.get(i).getMatricula().equals(matricula)) {
+				retorno = this.usuarios.get(i);
+			}
+		}
+		return retorno;
+	}
+	
+	
 	
 
 	
