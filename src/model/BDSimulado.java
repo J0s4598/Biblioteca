@@ -23,17 +23,9 @@ public class BDSimulado {
 		//Criando Usurios
 		Usuario u1 = new Usuario("João da Silva", "RA3434", "Direito");
 		Usuario u2 = new Usuario("Maria Joaquina", "RA123", "Nutrição");
-		Usuario u3 = new Usuario("Alberto", "RA2323", "Ciençia da Computação");
-		Usuario u4 = new Usuario("Josué", "RA2599", "Ciençia da Computação");
-		Usuario u5 = new Usuario("Gabriel", "RA4681", "Ciençia da Computação");
-		Usuario u6 = new Usuario("Rodrigo", "RA2864", "Ciençia da Computação");
 		//Add Us
 		this.usuarios.add(u1);
 		this.usuarios.add(u2);
-		this.usuarios.add(u3);
-		this.usuarios.add(u4);
-		this.usuarios.add(u5);
-		this.usuarios.add(u6);
 		
 		//Craindo Bibliotecario
 		Bibliotecario b1 = new Bibliotecario("Marcio", "123456");
@@ -89,6 +81,22 @@ public class BDSimulado {
 	public ArrayList<Usuario> getUsuarios() {
 		return usuarios;
 	}
+	
+	//Insere um usuario na lista de usuario
+	public void insereUsuario(Usuario usuario){
+		this.usuarios.add(usuario);
+	}
+	
+	//Insere um livro na lista livro
+	public void insereLivro(Livro livro){
+		this.livros.add(livro);
+	}
+
+	public ArrayList<Livro> getLivros() {
+		return livros;
+	}
+	
+	
 	
 	
 	
