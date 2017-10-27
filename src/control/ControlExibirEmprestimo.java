@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import model.BDSimulado;
 import model.Emprestimo;
-import view.ViewExibirEmprestimo;
 import view.ViewExibirEmprestimoString;
 
 public class ControlExibirEmprestimo {

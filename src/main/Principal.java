@@ -1,6 +1,8 @@
 package main;
 
 import control.ControlExibirEmprestimo;
+import control.ControlExibirUsuario;
+import control.ControlePesquisaLivro;
 import control.ControlePesquisaUsuario;
 
 public class Principal {
@@ -9,7 +11,11 @@ public class Principal {
 		//Cria objeo da ControleExibirEmprestimo
 		ControlExibirEmprestimo cee = new ControlExibirEmprestimo();
 		
-		ControlePesquisaUsuario cpu = new ControlePesquisaUsuario("RA123");
+		ControlePesquisaUsuario cpu = new ControlePesquisaUsuario();
+		
+		ControlePesquisaLivro cpl = new ControlePesquisaLivro();
+		
+		ControlExibirUsuario ceu = new ControlExibirUsuario();
 		
 
 	}

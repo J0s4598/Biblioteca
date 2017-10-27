@@ -49,7 +49,12 @@ public class Livro {
 		ISBM = iSBM;
 	}
 
-	
-	
-
+	//Metodo toString
+		public String toString(){
+			return "Nome do Titulo: " + this.titulo + "\n" + 
+					"Nome do Autor: " + this.autor + "\n" + 
+					"Editora: " + this.editora + "\n" + 
+					"Ano de Lançamento: " + this.anoLancamento + "\n" + 
+					"ISBM: " + this.ISBM + "\n";
+		}
 }
