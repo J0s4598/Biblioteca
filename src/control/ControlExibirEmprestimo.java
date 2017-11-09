@@ -7,26 +7,33 @@ import model.Emprestimo;
 import view.ViewExibirEmprestimoString;
 
 public class ControlExibirEmprestimo {
+	//Atributo
+	private BDSimulado bds;
 	
-	public ControlExibirEmprestimo(){
-		//Criando o BDSimulado
-		BDSimulado bds = new BDSimulado();
+		public ControlExibirEmprestimo(BDSimulado bds){
+			//guardar o bdSimulado
+			this.bds = bds;
+		}
+				
+		//Metodo que exibe todos os emprestimos
+		public void exibirEmprestimos(){
+			
+			
+			//Recuperar todos os emprestimos
+			ArrayList<Emprestimo> emprestimos = bds.getEmprestimo();
 		
-		//Recuperar todos os emprestimos
-		ArrayList<Emprestimo> emprestimos = bds.getEmprestimo();
-		
-		//exibir todos os empestimos
-		/*ViewExibirEmprestimo vee = new ViewExibirEmprestimo(emprestimos);*/
+			//exibir todos os empestimos
+			/*ViewExibirEmprestimo vee = new ViewExibirEmprestimo(emprestimos);*/
 		
 		
-		//Exibir todos os emprestimos usando outra classe
-		String s = "";
+			//Exibir todos os emprestimos usando outra classe
+			String s = "";
 		
-		for (int i = 0; i < emprestimos.size(); i++) {
-			s = s + "------------\n" + emprestimos.get(i);
+			for (int i = 0; i < emprestimos.size(); i++) {
+				s = s + "------------\n" + emprestimos.get(i);
 		}
 		
-		ViewExibirEmprestimoString vees = new ViewExibirEmprestimoString(s); 
+			ViewExibirEmprestimoString vees = new ViewExibirEmprestimoString(s); 
 		
 
 	}
